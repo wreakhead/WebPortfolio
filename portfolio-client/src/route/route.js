@@ -1,2 +1,2 @@
-const path = "http://localhost:7000/";
+const path = "https://portfolio-server-imran.herokuapp.com/";
 export default  path;
