@@ -6,6 +6,7 @@ import Container from "@material-ui/core/Container";
 import axios from "axios";
 import path from "../route/route";
 import OtherProjetcs from "./OtherProjects";
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Projects = () => {
   const [data, setData] = useState([]);
-  const [dataRecieved, setDataRecieved] = useState("nodata");
-
+  const [dataRecieved, setDataRecieved] = useState();
+  
   const getData = async () => {
     try {
       const fetchData = await axios.get(`${path}data`);
@@ -31,14 +32,18 @@ const Projects = () => {
     getData();
   }, [dataRecieved]);
 
+
+
   const classes = useStyles();
   return (
     <>
+     {dataRecieved? <></>:<LinearProgress/>}
       <h2>
         <strong className="brand-name d-flex justify-content-center">
           Projects
         </strong>
       </h2>
+     
       <Container maxWidth="md">
         <div className={classes.root}>
           <Grid container spacing={3}>
