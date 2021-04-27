@@ -56,7 +56,7 @@ const Projects = () => {
               if (i !== 0) {
                 return (
                   <>
-                    <Grid item xs={6} sm={4} className="otherProjects">
+                    <Grid  item xs={6} sm={4} className="otherProjects">
                       <OtherProjetcs
                         key={i}
                         title={data[i]?.title}

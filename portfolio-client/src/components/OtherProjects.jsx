@@ -45,11 +45,9 @@ const OtherProjetcs = (props) => {
 
       <CardActions>
         <SmallButton name="Source" link={props.linkSource} />
-        {() => {
-          if (props.linkAction) {
-            return (<SmallButton name="Action" link={props.linkAction} />);
-          }
-        }}
+        {
+            props.linkAction? <SmallButton name="Action" link={props.linkAction} />:<></>
+            }
       </CardActions>
     </Card>
   );
