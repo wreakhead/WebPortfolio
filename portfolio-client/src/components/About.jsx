@@ -2,10 +2,11 @@ import CommonLayout from "./CommonLayout";
 import React, { useState, useEffect } from "react";
 import path from "../route/route";
 import axios from "axios";
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 const About = () => {
   const [data, setData] = useState([]);
-  const [dataRecieved, setDataRecieved] = useState("nodata");
+  const [dataRecieved, setDataRecieved] = useState();
   const getData = async () => {
     try {
       const fetchData = await axios.get(`${path}about`);
@@ -22,6 +23,7 @@ const About = () => {
 
   return (
     <>
+     {dataRecieved? <></>:<LinearProgress/>}
       {data.map((_, i) => {
         return (
           <CommonLayout
@@ -40,3 +42,4 @@ const About = () => {
 };
 
 export default About;
+
