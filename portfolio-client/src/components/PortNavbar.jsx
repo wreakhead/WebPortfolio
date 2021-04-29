@@ -11,7 +11,7 @@ const PortNavbar = () => {
           <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
               <NavLink className="navbar-brand" to="/">
-                Navbar
+                Imran
               </NavLink>
               <button
                 className="navbar-toggler"
