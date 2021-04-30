@@ -60,10 +60,11 @@ const Projects = () => {
             {data.map((_, i) => {
               if (i !== 0) {
                 return (
-                  <>
-                    <Grid  item xs={6} sm={4} className="otherProjects">
+                
+                    <Grid key={data[i]?._id} item xs={6} sm={4} className="otherProjects">
+                      
                       <OtherProjetcs
-                        key={i}
+                        
                         title={data[i]?.title}
                         tech={data[i]?.tech}
                         discribe={data[i]?.describe}
@@ -72,7 +73,7 @@ const Projects = () => {
                         image={data[i]?.image}
                       />
                     </Grid>
-                  </>
+                  
                 );
               }
             })}
