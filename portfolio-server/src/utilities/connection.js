@@ -4,7 +4,7 @@ const {Schema} = require('mongoose');
 mongoose.Schema.promise =  global.Promise;
 
 mongoose.set('useCreateIndex',true);
-const url = "mongodb+srv://imran:imran6558@cluster0.he1vq.mongodb.net/portfolioDB?retryWrites=true&w=majority";
+const url = "mongodb+srv://imran:__________0.he1vq.mongodb.net/portfolioDB?retryWrites=true&w=majority";
 
 const projectData = Schema({
     title:String,
